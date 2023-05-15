@@ -1,0 +1,710 @@
+{
+	"info": {
+		"_postman_id": "77e94927-0693-43e4-9a46-9dd80f9dc1bc",
+		"name": "group1_p2_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26389247"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"yangqing\",\r\n    \"password\": \"88888888\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/user/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/dblink/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1\",\r\n    \"linkSystemName\": \"test3\",\r\n    \"linkDbType\": \"mysql\",\r\n    \"linkDbIp\": \"47.99.103.79\",\r\n    \"linkDbName\": \"order_system\",\r\n    \"linkUserName\": \"group1_p2_link\",   \r\n    \"linkPassword\": \"88888888\",\r\n    \"linkPort\": \"3306\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"test"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1\",\r\n    \"linkSystemName\": \"test\",\r\n    \"linkDbType\": \"mysql\",\r\n    \"linkDbIp\": \"47.99.103.79\",\r\n    \"linkDbName\": \"order_system\",\r\n    \"linkUserName\": \"group1_p2_link\",\r\n    \"linkPassword\": \"88888888\",\r\n    \"linkPort\": \"3306\",\r\n    \"linkComment\": \"测试\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/get_my_link",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/get_my_link?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"get_my_link"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/update_link",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1\",\r\n    \"linkSystemName\": \"update_mysql_link\",\r\n    \"linkDbType\": \"mysql\",\r\n    \"linkDbIp\": \"47.99.103.79\",\r\n    \"linkDbName\": \"order_system\",\r\n    \"linkUserName\": \"group1_p2_link\",\r\n    \"linkPassword\": \"88888888\",\r\n    \"linkPort\": \"3306\",\r\n    \"linkComment\": \"测试\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/update_link?dbLinkId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"update_link"
+					],
+					"query": [
+						{
+							"key": "dbLinkId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/sql",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/sql?SQL=SELECT * FROM customers; SELECT * FROM vendors;SELECT * FROM vendors;SELECT * FROM vendors;SELECT * FROM vendors;&dbLinkId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"sql"
+					],
+					"query": [
+						{
+							"key": "SQL",
+							"value": "SELECT * FROM customers; SELECT * FROM vendors;SELECT * FROM vendors;SELECT * FROM vendors;SELECT * FROM vendors;"
+						},
+						{
+							"key": "dbLinkId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/get_tables",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/get_tables?dbLinkId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"get_tables"
+					],
+					"query": [
+						{
+							"key": "dbLinkId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/get_table_info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/get_table_info?tableName=customers&dbLinkId=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"get_table_info"
+					],
+					"query": [
+						{
+							"key": "tableName",
+							"value": "customers"
+						},
+						{
+							"key": "dbLinkId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/full_export",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"columnNames\": [\r\n        \"cust_id\", \"cust_name\", \"cust_address\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/full_export?dbLinkId=2&tableName=customers&tableComment=客户信息&gatherState=1&gatherType=1&exportType=txt&exportPath=test&filterCriteria=cust_name='John'",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"full_export"
+					],
+					"query": [
+						{
+							"key": "dbLinkId",
+							"value": "2"
+						},
+						{
+							"key": "tableName",
+							"value": "customers"
+						},
+						{
+							"key": "tableComment",
+							"value": "客户信息"
+						},
+						{
+							"key": "gatherState",
+							"value": "1"
+						},
+						{
+							"key": "gatherType",
+							"value": "1"
+						},
+						{
+							"key": "exportType",
+							"value": "txt"
+						},
+						{
+							"key": "exportPath",
+							"value": "test"
+						},
+						{
+							"key": "filterCriteria",
+							"value": "cust_name='John'"
+						},
+						{
+							"key": "filterCriteria",
+							"value": "'cust_name'='John'",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/partial_export",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"columnNames\": [\r\n        \"cust_id\", \"cust_name\", \"cust_address\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/partial_export?dbLinkId=4&tableName=customers&tableComment=客户信息&gatherState=1&exportType=txt&exportPath=test&gatherType=0&filterCriteria=cust_name='John'&columnName=cust_id&start=10001&end=10003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"partial_export"
+					],
+					"query": [
+						{
+							"key": "dbLinkId",
+							"value": "4"
+						},
+						{
+							"key": "tableName",
+							"value": "customers"
+						},
+						{
+							"key": "tableComment",
+							"value": "客户信息"
+						},
+						{
+							"key": "gatherState",
+							"value": "1"
+						},
+						{
+							"key": "exportType",
+							"value": "txt"
+						},
+						{
+							"key": "exportPath",
+							"value": "test"
+						},
+						{
+							"key": "gatherType",
+							"value": "0"
+						},
+						{
+							"key": "filterCriteria",
+							"value": "cust_name='John'"
+						},
+						{
+							"key": "filterCriteria",
+							"value": "cust_name='Jane'",
+							"disabled": true
+						},
+						{
+							"key": "columnName",
+							"value": "cust_id"
+						},
+						{
+							"key": "start",
+							"value": "10001"
+						},
+						{
+							"key": "end",
+							"value": "10003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/history/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/history/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"history",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/history/get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/history/get?linkId=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"history",
+						"get"
+					],
+					"query": [
+						{
+							"key": "linkId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/history_info/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/history_info/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"history_info",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/history_info/get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/history_info/get?historyId=61",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"history_info",
+						"get"
+					],
+					"query": [
+						{
+							"key": "historyId",
+							"value": "61"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dbLinkIds\": [\r\n        3, 4, 6\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/delete_single",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/dblink/delete_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/dblink/delete_by_id?dbLinkId=35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"dblink",
+						"delete_by_id"
+					],
+					"query": [
+						{
+							"key": "dbLinkId",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// MySQL\r\n{\r\n    \"userId\": \"1\",\r\n    \"linkSystemName\": \"test3\",\r\n    \"linkDbType\": \"mysql\",\r\n    \"linkDbIp\": \"47.99.103.79\",\r\n    \"linkDbName\": \"order_system\",\r\n    \"linkUserName\": \"group1_p2_link\",\r\n    \"linkPassword\": \"88888888\",\r\n    \"linkPort\": \"3306\"\r\n}\r\n\r\n// SQLServer\r\n{\r\n    \"userId\": \"1\",\r\n    \"linkSystemName\": \"test3\",\r\n    \"linkDbType\": \"sqlserver\",\r\n    \"linkDbIp\": \"localhost\",\r\n    \"linkDbName\": \"order_system\",\r\n    \"linkUserName\": \"test\",\r\n    \"linkPassword\": \"test\",\r\n    \"linkPort\": \"1434\"\r\n}\r\n\r\n// Oracle\r\n{\r\n    \"userId\": \"1\",\r\n    \"linkSystemName\": \"test3\",\r\n    \"linkDbType\": \"oracle\",\r\n    \"linkDbIp\": \"localhost\",\r\n    \"linkUserName\": \"c##test\",\r\n    \"linkPassword\": \"test\",\r\n    \"linkPort\": \"1521\"\r\n}\r\n\r\n\r\n\r\n{\r\n    \"dbLink\": {\r\n        \"linkDbType\": \"oracle\",\r\n        \"linkDbIp\": \"localhost\",\r\n        \"linkUserName\": \"c##test\",\r\n        \"linkPassword\": \"test\",\r\n        \"linkPort\": \"1521\",\r\n        \"linkComment\": \"测试\"\r\n    },\r\n    \"columnNames\": [\r\n        \"cust_id\", \"cust_name\", \"cust_state\", \"cust_email\"\r\n    ]\r\n}\r\n\r\n{\r\n    \"dbLink\": {\r\n        \"userId\": \"1\",\r\n        \"linkSystemName\": \"testtest\",\r\n        \"linkDbType\": \"mysql\",\r\n        \"linkDbIp\": \"47.99.103.79\",\r\n        \"linkDbName\": \"order_system\",\r\n        \"linkUserName\": \"group1_p2_link\",\r\n        \"linkPassword\": \"88888888\",\r\n        \"linkPort\": \"3306\",\r\n        \"linkComment\": \"测试\"\r\n    },\r\n    \"columnNames\": [\r\n        \"cust_id\", \"cust_name\", \"cust_state\", \"cust_email\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "data",
+					"host": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

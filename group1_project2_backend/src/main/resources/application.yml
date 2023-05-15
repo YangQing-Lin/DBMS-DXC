@@ -1,0 +1,23 @@
+#spring.application.name=group1_backend
+
+#register-with-eureka: false
+
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 10
+  datasource:
+    username: group1
+    password: 888888
+    url: jdbc:mysql://47.99.103.79/group1_2
+  redis:
+    port: 6379
+    host: 47.99.103.79
+logging:
+  level:
+    com.group1: debug
+
+server:
+  port: 8081
+
